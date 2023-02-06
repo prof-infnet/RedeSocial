@@ -1,4 +1,4 @@
-namespace RedeSocial.API
+namespace RedeSocial.API.Models
 {
     public class WeatherForecast
     {
