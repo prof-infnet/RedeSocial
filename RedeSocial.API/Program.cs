@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using RedeSocial.API.Data;
+using RedeSocial.DAL.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddDbContext<RedeSocialAPIContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("RedeSocialAPIContext") ?? throw new InvalidOperationException("Connection string 'RedeSocialAPIContext' not found.")));
 

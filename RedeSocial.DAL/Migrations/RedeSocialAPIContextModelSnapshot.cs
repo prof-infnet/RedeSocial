@@ -2,19 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RedeSocial.API.Data;
+using RedeSocial.DAL.Data;
 
 #nullable disable
 
-namespace RedeSocial.API.Migrations
+namespace RedeSocial.DAL.Migrations
 {
     [DbContext(typeof(RedeSocialAPIContext))]
-    [Migration("20230206114245_Initial")]
-    partial class Initial
+    partial class RedeSocialAPIContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -23,7 +21,7 @@ namespace RedeSocial.API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("RedeSocial.API.Models.TodoItem", b =>
+            modelBuilder.Entity("RedeSocial.BLL.Models.TodoItem", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()

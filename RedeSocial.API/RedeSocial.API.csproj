@@ -16,4 +16,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RedeSocial.BLL\RedeSocial.BLL.csproj" />
+    <ProjectReference Include="..\RedeSocial.DAL\RedeSocial.DAL.csproj" />
+  </ItemGroup>
+
 </Project>
